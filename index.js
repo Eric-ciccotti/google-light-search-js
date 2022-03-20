@@ -33,16 +33,19 @@ async function search() {
         const data = response.json().then(data => {
             data.results.forEach(element => {
                 const responseDiv = document.createElement("div");
-                const titre = document.createElement("h1");
+                const titre = document.createElement("h2");
                 const description = document.createElement("p");
                 const lien = document.createElement("a");
 
                 responseDiv.classList.add("result");
-                titre.innerText = element.title;
+                titre.innerHTML = `
+                    <i class="fa-solid fa-arrow-right-long"></i> 
+                    <a href="${element.link}">${element.title}</a>
+                `;
+                titre.classList.add("titreResult");
                 description.innerText = element.description;
                 lien.innerHTML = element.link;
                 lien.href = element.link;
-
                 responseList.appendChild(responseDiv);
                 responseDiv.appendChild(titre);
                 responseDiv.appendChild(description);

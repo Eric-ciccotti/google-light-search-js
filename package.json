@@ -1,0 +1,11 @@
+{
+  "name": "challengejs",
+  "version": "1.0.0",
+  "description": "challenge JS CSS HTML FLEXBOX GRID ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "eric ciccotti",
+  "license": "ISC"
+}

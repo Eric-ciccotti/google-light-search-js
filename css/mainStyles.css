@@ -1,0 +1,174 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #189cff;
+  padding: 15px;
+}
+
+.flex-container-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #189cff;
+  padding: 15px;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin: 0 0 0 0.45em;
+}
+.logo a {
+  color: rgb(255 255 255);
+}
+
+.logo,
+.navigation {
+  list-style: none;
+}
+
+.logo a,
+.navigation a {
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  color: white;
+}
+
+.navigation a:hover {
+  background: #00ace6;
+}
+
+/* *********** media queries *********** */
+@media all and (max-width: 990px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .logo {
+    margin: 0;
+  }
+
+  .navigation {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+/* ****** responsive sur petit device ****** */
+@media all and (max-width: 600px) {
+  .logo {
+    margin: 0.25em 0;
+    align-self: left;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+
+  .form {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.form {
+  margin: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form input {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid rgb(220, 220, 243);
+  border-radius: 10px;
+}
+
+.form label {
+  font-size: large;
+}
+
+button {
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  border: 0px solid;
+  border-radius: 10px;
+}
+
+button:hover {
+  background-color: rgb(11, 32, 99);
+  color: white;
+  cursor: pointer;
+}
+
+.result {
+  margin: 10px;
+}
+
+/* ****** petit loader ****** */
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
